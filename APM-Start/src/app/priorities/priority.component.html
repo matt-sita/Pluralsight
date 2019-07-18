@@ -1,0 +1,50 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div style="border:solid 1px #337ab7; padding:5px 0px 5px 0px;">
+      <b style="padding:0px 5px 0px 5px; color:#337ab7;">Filter:</b>
+      <input type='text' placeholder="Priority Name..." [(ngModel)]='listFilter' />
+    </div>
+    <div class='table-responsive'>
+      <table class='table' *ngIf='priorities && priorities.length'>
+        <thead>
+          <tr>
+            <th>Prority Id</th>
+            <th>Name</th>
+            <th>Rank</th>
+            <th>Expiration Buffer</th>
+            <th>Is Live</th>
+            <th>Is Emergency</th>
+            <th>Is Repeated</th>
+            <th>Repeat Buffer</th>
+            <th>Level Adjustment</th>
+            <th>Is Interruptible</th>
+            <th>Percent Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let p of filteredPriorities'>
+            <!--<td>
+              <a [routerLink]="['/products', product.productId]">{ {product.productName}}</a>
+            </td>-->
+            <!--<td>{ {p.productCode | lowercase | convertToSpaces: '-'}}</td>-->
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.rank}}</td>
+            <td>{{p.expirationBuffer}}</td>
+            <td>{{p.isLiveMicrophone}}</td>
+            <td>{{p.isEmergency}}</td>
+            <td>{{p.isRepeated}}</td>
+            <td>{{p.repeatBuffer}}</td>
+            <td>{{p.levelAdjustment}}</td>
+            <td>{{p.isInterruptible}}</td>
+            <td>{{p.percentAvailable}}</td>
+            <!--<td><pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></pm-star></td>-->
+          </tr>  
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

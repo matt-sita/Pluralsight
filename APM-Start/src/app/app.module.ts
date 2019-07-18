@@ -7,6 +7,7 @@ import { WelcomeComponent } from './home/welcome.component';
 //Importing modules with routing
 //The router uses a first-match wins strategy when matching routes, so more specific routes should be placed above less specific routes.
 import { ProductModule } from './products/product.module';
+import { PriorityModule } from './priorities/priority.module';
 import { AppRoutingModule } from './app-routing.module'; //Import last because the any wildcard & blank routing is very generic & covers lots of cases (More specific cases are first and handled before route code drops here)
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module'; //Import last because t
     BrowserModule,
     HttpClientModule,
     ProductModule,
+    PriorityModule,
     AppRoutingModule
   ],
   bootstrap: [AppComponent]
