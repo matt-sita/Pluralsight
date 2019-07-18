@@ -10,7 +10,7 @@ import { IPriority } from './priority';
 })
 
 export class PriorityService {
-  private priorityUrl = 'http://dev-paging4:22222/PaxComApi/api/priority';
+  private priorityUrl = 'https://dev-paging4:22222/PaxComApi/api/priority';
 
   constructor(private https: HttpClient) { }
 
